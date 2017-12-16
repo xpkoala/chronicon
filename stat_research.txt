@@ -1,0 +1,65 @@
+character attributes (objects)
+- health
+- mana
+- damage
+- attack speed
+- critical hit chance
+- critical hit damage
+- overpower (spell pen)
+
+- poison damage
+- frost damage
+- fire damage
+- shadow damage
+- sorcery damage
+- curse damage
+- bane damage
+
+- thorns
+- health per second
+- mana per second
+- health on hit
+- mana on hit
+- potion effectiveness
+- movement speed
+
+- physical resistance
+- fire resistance
+- frost resistance
+- lightning resistance
+- poison resistance
+- holy resistance
+- shadow resistance
+
+- cool down reduction
+- mana cost reduction
+- effect duration
+- pickup strength
+- pickup radius
+- crystals found
+- magic find
+
+- light radius 
+- experience gained
+- companion health
+- companion damage
+- reach
+- evasion
+- soul steal chance (warlock)
+
+- bleed damage (+mod; ex 83)
+- burn damage
+- chill damage
+- poison dot damage
+- chain lightning damage
+- holy smite damage
+- blight damage
+
+under a ‘misc’ category - need to investigate further
+- bleed damage (%)
+- minimum souls
+- maximum souls
+- physical damage
+- holy damage
+- lightning damage
+
