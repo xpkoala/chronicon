@@ -177,6 +177,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 20,
+      image: '../img/warlock/mastery/fire/destruction.png',
     },
     ignition: {
       name: 'Ignition',
