@@ -188,6 +188,7 @@ let warlockMastery = {
       masteryReq: 5,
       currentRank: 0,
       maxRank: 99999,
+      image: '../img/warlock/mastery/fire/ignition.png',
     },
     incendiarySpells: {
       name: 'Incendiary Spells',
@@ -198,6 +199,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 20,
+      image: '../img/warlock/mastery/fire/incendiary_spells.png',
     },
     animosity: {
       name: 'Animosity',
@@ -208,6 +210,7 @@ let warlockMastery = {
       masteryReq: 15,
       currentRank: 0,
       maxRank: 99999,
+      image: '../img/warlock/mastery/fire/animosity.png',
     },
     blastWave: {
       name: 'Blast Wave',
@@ -218,6 +221,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 100,
+      image: '../img/warlock/mastery/fire/blast_wave.png',
     },
     pyromaniac: {
       name: 'Pyromaniac',
@@ -228,6 +232,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 99999,
+      image: '../img/warlock/mastery/fire/pyromaniac.png',
     },
     burningHells: {
       name: 'Burning Hells',
@@ -238,6 +243,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 100,
+      image: '../img/warlock/mastery/fire/burning_hells.png',
     },
     hellRaiser: {
       name: 'Hell Raiser',
@@ -248,6 +254,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 99999,
+      image: '../img/warlock/mastery/fire/hellraiser.png',
     },
     diabolist: {
       name: 'Diabolist',
@@ -258,6 +265,7 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 20,
+      image: '../img/warlock/mastery/fire/diabolist.png',
     },
   },
   shadow: {
