@@ -35,4 +35,3 @@ hell raiser
 
 diabolist
 - 3% reduced cool down of *infernal demon* and *demon spawn*
-
