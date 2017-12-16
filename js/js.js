@@ -1,30 +1,169 @@
-let character = {
-  name: '',
-  health() {
-    return (10 * 1.05)
+let characterWarlock = {
+  name: 'Warlock',
+  healthBonus() {
+    let health = 0:
+    health += (warlockMastery.bane.darkBlood.currentRank * warlockMastery.bane.darkBlood.multiplier);
+    return health
   },
-  mana: 100,
-  damage: 0,
-  attackSpeed: 100,
-  critChance: 10,
-  critDmg: 10,
-  overpower: 10,
+  healthPercent() {
+    let healthPercentage = 0:
+    return null
+  },
+  healthPerSecond() {
+    let healthPerSecond = 0:
+    healthPerSecond += (warlockMastery.bane.unholyRenewal.currentRank * warlockMastery.bane.unholyRenewal.multiplier);
+    return healthPerSecond
+  },
+  healthOnHit() {
+    let healthOnHit = 0:
+    return null
+  },
+  manaBonus(): {
+    let manaBonus = 0:
+    manaBonus += (warlockMastery.curse.soulDrinker.currentRank * warlockMastery.curse.soulDrinker.multiplier);
+    return manaBonus
+  },
+  manaPercent() {
+    let manaPercent = 0:
+    manaPercent += (warlockMastery.shadow.soulDrain.currentRank * warlockMastery.shadow.soulDrain.multiplier);
+    return manaPercent
+  },
+  manaPerSecond() {
+    let manaPerSecond = 0:
+    return null
+  },
+  manaOnHit() {
+    let manaOnHit = 0:
+    return null
+  },
+  reach() {
+    let reach = 0:
+    reach += (warlockMastery.fire.destruction.currentRank * warlockMastery.fire.destruction.multiplier);
+    return reach
+  },
+  effectDuration() {
+    let effectDuration = 0:
+    effectDuration += (warlockMastery.curse.jinxed.currentRank * warlockMastery.curse.jinxed.multiplier);
+    return effectDuration
+  },
+   damageBonus() {
+     let damageBonus = 0:
+     damageBonus += (warlockMastery.sorcery.spellpower.currentRank * warlockMastery.sorcery.spellpower.multiplier);
+     return damageBonus
+   },
+   attackSpeedBonus() {
+     let attackSpeedBonus = 0:
+     attackSpeedBonus += (warlockMastery.poison.rapidInfections.currentRank * warlockMastery.poison.rapidInfections.currentRank);
+     return attackSpeedBonus
+   },
+  critChance() {
+    let critChance = 0:
+    critChance += (warlockMastery.sorcery.elementalOverload.currentRank * warlockMastery.sorcery.elementalOverload.multiplier);
+    return critChance
+  },
+  critDamage() {
+    let critDamage = 0:
+    critDamage += (warlockMastery.frost.skullShatter.currentRank * warlockMastery.frost.skullShatter.multiplier);
+    return critDamage
+  },
+  overpowerBonus() {
+    let overpowerBonus = 0:
+    overpowerBonus += (warlockMastery.bane.overpowerSkill.currentRank * warlockMastery.bane.overpowerSkill.multiplier)
+    + (warlockMastery.curse.overpowerSkill.currentRank * warlockMastery.curse.overpowerSkill.multiplier)
+    + (warlockMastery.sorcery.overpowerSkill.currentRank * warlockMastery.sorcery.overpowerSkill.multiplier);
+    return overpowerBonus
+  },
+  poisonDamage() {
+    let poisonDamage = 0:
+    return null
+  },
+  frostDamage() {
+    let frostDamage = 0:
+    return null
+  },
+  fireDamage() {
+    let fireDamage = 0:
+    return null
+  },
+  shadowDamage() {
+    let shadowDamage = 0:
+    return null
+  },
+  sorceryDamage() {
+    let sorceryDamage = 0:
+    return null
+  },
+  curseDamage() {
+    let curseDamage = 0:
+    return null
+  },
+  baneDamage() {
+    let baneDamage = 0:
+    return null
+  },
+  physicalResist() {
+    let physicalResist = 0:
+    return null
+  },
+  fireResist() {
+    let fireResist = 0:
+    fireResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
+    + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
+    return fireResist
+  },
+  frostResist() {
+    let frostResist = 0:
+    frostResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
+    + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
+    return frostResist
+  },
+  lightningResist() {
+    let lightningResist = 0:
+    lightningResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
+    + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
+    return lightningResist
+  },
+  poisonResist() {
+    let poisonResist = 0:
+    poisonResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
+    + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
+    return poisonResist
+  },
+  holyResist() {
+    let holyResist = 0:
+    holyResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
+    + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
+    return holyResist
+  },
+  ShadowResist() {
+    let ShadowResist = 0:
+    ShadowResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
+    + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
+    return ShadowResist
+  },
+ thorns() {
+   let thorns = 0:
+   return null
+ },
+ potionEffectiveness() {
+   let potionEffectiveness = 0:
+   potionEffectiveness += (warlockMastery.curse.improvedPotions.currentRank * warlockMastery.curse.improvedPotions.multiplier)
+   + (warlockMastery.sorcery.improvedPotions.currentRank * warlockMastery.sorcery.improvedPotions.multiplier)
+   + (warlockMastery.bane.improvedPotions.currentRank * warlockMastery.bane.improvedPotions.multiplier);
+   return potionEffectiveness
+ },
+  moveSpeed() {
+    let moveSpeed = 0:
+    moveSpeed += (warlockMastery.bane.deathsMarch.currentRank * warlockMastery.bane.deathsMarch.multiplier);
+    return moveSpeed
+  },
 
-  poisonDmg: 10,
-  frostDmg: 10,
-  fireDmg: 10,
-  shadowDmg: 10,
-  sorceryDmg: 10,
-  curseDmg: 10,
-  baneDmg: 10,
-
-  thorns: 10,
-  healthPerSecond: 10,
-  manaPerSecond: 10,
-  healthOnHit: 10,
-  ManaOnHit: 10,
-  potionEffectiveness: 10,
-  moveSpeed: 10,
 };
 
 let warlockMastery = {
@@ -505,7 +644,7 @@ let warlockMastery = {
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
-      masteryReq: 5,
+      umasteryReq: 5,
       currentRank: 0,
       maxRank: 10,
     },
