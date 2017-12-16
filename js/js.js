@@ -1,167 +1,167 @@
-let characterWarlock = {
+const characterWarlock = {
   name: 'Warlock',
   healthBonus() {
-    let health = 0:
+    let health = 0;
     health += (warlockMastery.bane.darkBlood.currentRank * warlockMastery.bane.darkBlood.multiplier);
-    return health
+    return health;
   },
   healthPercent() {
-    let healthPercentage = 0:
-    return null
+    const healthPercentage = 0;
+    return null;
   },
   healthPerSecond() {
-    let healthPerSecond = 0:
+    let healthPerSecond = 0;
     healthPerSecond += (warlockMastery.bane.unholyRenewal.currentRank * warlockMastery.bane.unholyRenewal.multiplier);
-    return healthPerSecond
+    return healthPerSecond;
   },
   healthOnHit() {
-    let healthOnHit = 0:
-    return null
+    const healthOnHit = 0;
+    return null;
   },
-  manaBonus(): {
-    let manaBonus = 0:
+  manaBonus() {
+    let manaBonus = 0;
     manaBonus += (warlockMastery.curse.soulDrinker.currentRank * warlockMastery.curse.soulDrinker.multiplier);
-    return manaBonus
+    return manaBonus;
   },
   manaPercent() {
-    let manaPercent = 0:
+    let manaPercent = 0;
     manaPercent += (warlockMastery.shadow.soulDrain.currentRank * warlockMastery.shadow.soulDrain.multiplier);
-    return manaPercent
+    return manaPercent;
   },
   manaPerSecond() {
-    let manaPerSecond = 0:
-    return null
+    const manaPerSecond = 0;
+    return null;
   },
   manaOnHit() {
-    let manaOnHit = 0:
-    return null
+    const manaOnHit = 0;
+    return null;
   },
   reach() {
-    let reach = 0:
+    let reach = 0;
     reach += (warlockMastery.fire.destruction.currentRank * warlockMastery.fire.destruction.multiplier);
-    return reach
+    return reach;
   },
   effectDuration() {
-    let effectDuration = 0:
+    let effectDuration = 0;
     effectDuration += (warlockMastery.curse.jinxed.currentRank * warlockMastery.curse.jinxed.multiplier);
-    return effectDuration
+    return effectDuration;
   },
-   damageBonus() {
-     let damageBonus = 0:
-     damageBonus += (warlockMastery.sorcery.spellpower.currentRank * warlockMastery.sorcery.spellpower.multiplier);
-     return damageBonus
-   },
-   attackSpeedBonus() {
-     let attackSpeedBonus = 0:
-     attackSpeedBonus += (warlockMastery.poison.rapidInfections.currentRank * warlockMastery.poison.rapidInfections.currentRank);
-     return attackSpeedBonus
-   },
+  damageBonus() {
+    let damageBonus = 0;
+    damageBonus += (warlockMastery.sorcery.spellpower.currentRank * warlockMastery.sorcery.spellpower.multiplier);
+    return damageBonus;
+  },
+  attackSpeedBonus() {
+    let attackSpeedBonus = 0;
+    attackSpeedBonus += (warlockMastery.poison.rapidInfections.currentRank * warlockMastery.poison.rapidInfections.currentRank);
+    return attackSpeedBonus;
+  },
   critChance() {
-    let critChance = 0:
+    let critChance = 0;
     critChance += (warlockMastery.sorcery.elementalOverload.currentRank * warlockMastery.sorcery.elementalOverload.multiplier);
-    return critChance
+    return critChance;
   },
   critDamage() {
-    let critDamage = 0:
+    let critDamage = 0;
     critDamage += (warlockMastery.frost.skullShatter.currentRank * warlockMastery.frost.skullShatter.multiplier);
-    return critDamage
+    return critDamage;
   },
   overpowerBonus() {
-    let overpowerBonus = 0:
+    let overpowerBonus = 0;
     overpowerBonus += (warlockMastery.bane.overpowerSkill.currentRank * warlockMastery.bane.overpowerSkill.multiplier)
     + (warlockMastery.curse.overpowerSkill.currentRank * warlockMastery.curse.overpowerSkill.multiplier)
     + (warlockMastery.sorcery.overpowerSkill.currentRank * warlockMastery.sorcery.overpowerSkill.multiplier);
-    return overpowerBonus
+    return overpowerBonus;
   },
   poisonDamage() {
-    let poisonDamage = 0:
-    return null
+    const poisonDamage = 0;
+    return null;
   },
   frostDamage() {
-    let frostDamage = 0:
-    return null
+    const frostDamage = 0;
+    return null;
   },
   fireDamage() {
-    let fireDamage = 0:
-    return null
+    const fireDamage = 0;
+    return null;
   },
   shadowDamage() {
-    let shadowDamage = 0:
-    return null
+    const shadowDamage = 0;
+    return null;
   },
   sorceryDamage() {
-    let sorceryDamage = 0:
-    return null
+    const sorceryDamage = 0;
+    return null;
   },
   curseDamage() {
-    let curseDamage = 0:
-    return null
+    const curseDamage = 0;
+    return null;
   },
   baneDamage() {
-    let baneDamage = 0:
-    return null
+    const baneDamage = 0;
+    return null;
   },
   physicalResist() {
-    let physicalResist = 0:
-    return null
+    const physicalResist = 0;
+    return null;
   },
   fireResist() {
-    let fireResist = 0:
+    let fireResist = 0;
     fireResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
-    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
-    return fireResist
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
+    return fireResist;
   },
   frostResist() {
-    let frostResist = 0:
+    let frostResist = 0;
     frostResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
-    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
-    return frostResist
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
+    return frostResist;
   },
   lightningResist() {
-    let lightningResist = 0:
+    let lightningResist = 0;
     lightningResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
-    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
-    return lightningResist
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
+    return lightningResist;
   },
   poisonResist() {
-    let poisonResist = 0:
+    let poisonResist = 0;
     poisonResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
-    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
-    return poisonResist
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
+    return poisonResist;
   },
   holyResist() {
-    let holyResist = 0:
+    let holyResist = 0;
     holyResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
-    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
-    return holyResist
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
+    return holyResist;
   },
   ShadowResist() {
-    let ShadowResist = 0:
+    let ShadowResist = 0;
     ShadowResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
-    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier),
-    return ShadowResist
+    + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
+    return ShadowResist;
   },
- thorns() {
-   let thorns = 0:
-   return null
- },
- potionEffectiveness() {
-   let potionEffectiveness = 0:
-   potionEffectiveness += (warlockMastery.curse.improvedPotions.currentRank * warlockMastery.curse.improvedPotions.multiplier)
+  thorns() {
+    const thorns = 0;
+    return null;
+  },
+  potionEffectiveness() {
+    let potionEffectiveness = 0;
+    potionEffectiveness += (warlockMastery.curse.improvedPotions.currentRank * warlockMastery.curse.improvedPotions.multiplier)
    + (warlockMastery.sorcery.improvedPotions.currentRank * warlockMastery.sorcery.improvedPotions.multiplier)
    + (warlockMastery.bane.improvedPotions.currentRank * warlockMastery.bane.improvedPotions.multiplier);
-   return potionEffectiveness
- },
+    return potionEffectiveness;
+  },
   moveSpeed() {
-    let moveSpeed = 0:
+    let moveSpeed = 0;
     moveSpeed += (warlockMastery.bane.deathsMarch.currentRank * warlockMastery.bane.deathsMarch.multiplier);
-    return moveSpeed
+    return moveSpeed;
   },
 
 };
@@ -169,8 +169,8 @@ let characterWarlock = {
 let warlockMastery = {
   fire: {
     destruction: {
-      name: "Destruction",
-      description: `+1% Reach.`,
+      name: 'Destruction',
+      description: '+1% Reach.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 1,
@@ -179,8 +179,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     ignition: {
-      name: "Ignition",
-      description: `2% increased damage of *Firebomb* and *Flashfire.`,
+      name: 'Ignition',
+      description: '2% increased damage of *Firebomb* and *Flashfire.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 2,
@@ -189,8 +189,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     incendiarySpells: {
-      name: "Incendiary Spells",
-      description: `+1% chance to trigger *Combustion*.`,
+      name: 'Incendiary Spells',
+      description: '+1% chance to trigger *Combustion*.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 1,
@@ -199,8 +199,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     animosity: {
-      name: "Animosity",
-      description: `2% increased *Detonation*, *Hell Pit*, and *Heat Wave* damage per rank.`,
+      name: 'Animosity',
+      description: '2% increased *Detonation*, *Hell Pit*, and *Heat Wave* damage per rank.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 2,
@@ -209,8 +209,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     blastWave: {
-      name: "Blast Wave",
-      description: `5% increased damage of *Combustion*.`,
+      name: 'Blast Wave',
+      description: '5% increased damage of *Combustion*.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 5,
@@ -219,8 +219,8 @@ let warlockMastery = {
       maxRank: 100,
     },
     pyromaniac: {
-      name: "Pyromaniac",
-      description: `2% increased *Hellfire*, *Firenova*, and *Wall of Fire* damage.`,
+      name: 'Pyromaniac',
+      description: '2% increased *Hellfire*, *Firenova*, and *Wall of Fire* damage.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 2,
@@ -229,8 +229,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     burningHells: {
-      name: "Burning Hells",
-      description: `5% increased damage of *Flaming Hells*.`,
+      name: 'Burning Hells',
+      description: '5% increased damage of *Flaming Hells*.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 5,
@@ -239,8 +239,8 @@ let warlockMastery = {
       maxRank: 100,
     },
     hellRaiser: {
-      name: "Hell Raiser",
-      description: `2% increased *Inferno*, *Meteor*, and *Fire Storm* damage per rank.`,
+      name: 'Hell Raiser',
+      description: '2% increased *Inferno*, *Meteor*, and *Fire Storm* damage per rank.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 2,
@@ -249,8 +249,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     diabolist: {
-      name: "Diabolist",
-      description: `3% reduced cool down of *Infernal Demon* and *Demon Spawn*.`,
+      name: 'Diabolist',
+      description: '3% reduced cool down of *Infernal Demon* and *Demon Spawn*.',
       type: ['fire'],
       skillType: 'passive',
       multiplier: 3,
@@ -258,11 +258,11 @@ let warlockMastery = {
       currentRank: 0,
       maxRank: 20,
     },
-	},
+  },
   shadow: {
     soulDrain: {
-      name: "Soul Drain",
-      description: `1% Mana.`,
+      name: 'Soul Drain',
+      description: '1% Mana.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 1,
@@ -271,8 +271,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     necromancy: {
-      name: "Necromancy",
-      description: `2% increased damage of *Screaming Skull* and *Hand of Death*.`,
+      name: 'Necromancy',
+      description: '2% increased damage of *Screaming Skull* and *Hand of Death*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -281,8 +281,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     deathblow: {
-      name: "Deathblow",
-      description: `1% chance to trigger *Sudden Death*.`,
+      name: 'Deathblow',
+      description: '1% chance to trigger *Sudden Death*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 1,
@@ -292,7 +292,7 @@ let warlockMastery = {
     },
     dontFearTheReaper: {
       name: "Don't Fear The Reaper",
-      description: `2% increased damage of *Life Reap*, *Curse of Woe*, and *Grave Blast*.`,
+      description: '2% increased damage of *Life Reap*, *Curse of Woe*, and *Grave Blast*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -301,8 +301,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     darkLust: {
-      name: "Dark Lust",
-      description: `1% increased effect of *Masochism*.`,
+      name: 'Dark Lust',
+      description: '1% increased effect of *Masochism*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 1,
@@ -311,8 +311,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     agony: {
-      name: "Agony",
-      description: `2% increased damage of *Curse of Terror*, *Curse of Reckoning*, and *Bone Spears*.`,
+      name: 'Agony',
+      description: '2% increased damage of *Curse of Terror*, *Curse of Reckoning*, and *Bone Spears*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -321,8 +321,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     sorrow: {
-      name: "Sorrow",
-      description: `5% increased damage of *Desecration*.`,
+      name: 'Sorrow',
+      description: '5% increased damage of *Desecration*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 5,
@@ -331,8 +331,8 @@ let warlockMastery = {
       maxRank: 100,
     },
     boneCharmer: {
-      name: "Bone Charmer",
-      description: `2% increased damage of *Bone Scythe*, *Bone Storm*, and *Bone Curse*.`,
+      name: 'Bone Charmer',
+      description: '2% increased damage of *Bone Scythe*, *Bone Storm*, and *Bone Curse*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -341,8 +341,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     darkLord: {
-      name: "Dark Lord",
-      description: `3% reduced cooldown of *Death Knight*, *Vampire Lord*, and *Raise Dead*.`,
+      name: 'Dark Lord',
+      description: '3% reduced cooldown of *Death Knight*, *Vampire Lord*, and *Raise Dead*.',
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 3,
@@ -353,8 +353,8 @@ let warlockMastery = {
   },
   frost: {
     skullShatter: {
-      name: "Skull Shatter",
-      description: `+1% Critical Hit Damage.`,
+      name: 'Skull Shatter',
+      description: '+1% Critical Hit Damage.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 1,
@@ -363,8 +363,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     eternalCold: {
-      name: "Eternal Cold",
-      description: `2% increased damage of *Frost Spear* and *Frozen Flash*.`,
+      name: 'Eternal Cold',
+      description: '2% increased damage of *Frost Spear* and *Frozen Flash*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -373,8 +373,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     frozenCorpses: {
-      name: "Frozen Corpses",
-      description: `+1% chance to trigger *Corpse Shatter*.`,
+      name: 'Frozen Corpses',
+      description: '+1% chance to trigger *Corpse Shatter*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 1,
@@ -383,8 +383,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     frozenSkull: {
-      name: "Frozen Skull",
-      description: `2% increased damage of *Serrated Spears*, *Skull Bomb*, and *Ruin*.`,
+      name: 'Frozen Skull',
+      description: '2% increased damage of *Serrated Spears*, *Skull Bomb*, and *Ruin*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -393,8 +393,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     iceShield: {
-      name: "Ice Shield",
-      description: `5% increased damage absorbed by *Frozen Veil*.`,
+      name: 'Ice Shield',
+      description: '5% increased damage absorbed by *Frozen Veil*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 5,
@@ -403,8 +403,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     deathChill: {
-      name: "Death Chill",
-      description: `2% increased damage of *Frigid Star*, *Frost Nova*, and *Frozen Fate*.`,
+      name: 'Death Chill',
+      description: '2% increased damage of *Frigid Star*, *Frost Nova*, and *Frozen Fate*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -413,8 +413,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     freezingDeath: {
-      name: "Freezing Death",
-      description: `5% increased damage of *Cold Death*.`,
+      name: 'Freezing Death',
+      description: '5% increased damage of *Cold Death*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 5,
@@ -423,8 +423,8 @@ let warlockMastery = {
       maxRank: 100,
     },
     coldPassion: {
-      name: "Cold Passion",
-      description: `2% increased damage of *Comet*, *Deathly Barrage*, and *Curse of Doom*.`,
+      name: 'Cold Passion',
+      description: '2% increased damage of *Comet*, *Deathly Barrage*, and *Curse of Doom*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -434,7 +434,7 @@ let warlockMastery = {
     },
     deathsGift: {
       name: "Death's Gift",
-      description: `3% reduced cooldown of *Frozen Death* and *Lich Form*.`,
+      description: '3% reduced cooldown of *Frozen Death* and *Lich Form*.',
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 3,
@@ -445,8 +445,8 @@ let warlockMastery = {
   },
   poison: {
     rapidInfections: {
-      name: "Rapid Infections",
-      description: `+1% Attack Speed.`,
+      name: 'Rapid Infections',
+      description: '+1% Attack Speed.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 1,
@@ -455,8 +455,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     rottingFlesh: {
-      name: "Rotting Flesh",
-      description: `2% increased damage of *Poison Bolt* and *Blood Curse*.`,
+      name: 'Rotting Flesh',
+      description: '2% increased damage of *Poison Bolt* and *Blood Curse*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -465,8 +465,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     taint: {
-      name: "Taint",
-      description: `1% increased chance to trigger *Outbreak*.`,
+      name: 'Taint',
+      description: '1% increased chance to trigger *Outbreak*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 1,
@@ -475,8 +475,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     contamination: {
-      name: "Contamination",
-      description: `2% increased damage of *Poison Skull*, *Plauge*, and *Flesh Rot*.`,
+      name: 'Contamination',
+      description: '2% increased damage of *Poison Skull*, *Plauge*, and *Flesh Rot*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -485,8 +485,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     infusedBlood: {
-      name: "Infused Blood",
-      description: `1% increased chance to trigger *Living Blood*.`,
+      name: 'Infused Blood',
+      description: '1% increased chance to trigger *Living Blood*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 1,
@@ -495,8 +495,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     defilement: {
-      name: "Defilement",
-      description: `2% increased damage of *Poison Nova*, *Bane of the Dead*, and *Mind Torture*.`,
+      name: 'Defilement',
+      description: '2% increased damage of *Poison Nova*, *Bane of the Dead*, and *Mind Torture*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -505,8 +505,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     infectionsDisease: {
-      name: "Infectious Disease",
-      description: `5% increased damage of *Infection*.`,
+      name: 'Infectious Disease',
+      description: '5% increased damage of *Infection*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 5,
@@ -515,8 +515,8 @@ let warlockMastery = {
       maxRank: 100,
     },
     sickness: {
-      name: "Sickness",
-      description: `2% increased damage of *Vile Pool*, *Affliction*, and *Corruption*.`,
+      name: 'Sickness',
+      description: '2% increased damage of *Vile Pool*, *Affliction*, and *Corruption*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -525,8 +525,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     malignancy: {
-      name: "Malignancy",
-      description: `3% reduced cooldown of *Plague Lord* and *Cloak of Infection*.`,
+      name: 'Malignancy',
+      description: '3% reduced cooldown of *Plague Lord* and *Cloak of Infection*.',
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 3,
@@ -537,8 +537,8 @@ let warlockMastery = {
   },
   curse: {
     soulDrinker: {
-      name: "Soul Drinker",
-      description: `+10 Mana.`,
+      name: 'Soul Drinker',
+      description: '+10 Mana.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -547,8 +547,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     jinxed: {
-      name: "Jinxed",
-      description: `+2% Effect Duration.`,
+      name: 'Jinxed',
+      description: '+2% Effect Duration.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
@@ -557,8 +557,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     soulVessels: {
-      name: "Soul Vessels",
-      description: `+1 Maximum Souls.`,
+      name: 'Soul Vessels',
+      description: '+1 Maximum Souls.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -567,8 +567,8 @@ let warlockMastery = {
       maxRank: 5,
     },
     frenziedMinions: {
-      name: "Frenzied Minions",
-      description: `+1% Companion Damage.`,
+      name: 'Frenzied Minions',
+      description: '+1% Companion Damage.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -577,8 +577,8 @@ let warlockMastery = {
       maxRank: 30,
     },
     improvedPotions: {
-      name: "Improved Potions",
-      description: `+3% Potion Effectiveness.`,
+      name: 'Improved Potions',
+      description: '+3% Potion Effectiveness.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 3,
@@ -587,8 +587,8 @@ let warlockMastery = {
       maxRank: 15,
     },
     enhancedResistance: {
-      name: "Enhanced Resistance",
-      description: `+1% Resistance to all Elements.`,
+      name: 'Enhanced Resistance',
+      description: '+1% Resistance to all Elements.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -597,8 +597,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     overpowerSkill: {
-      name: "Overpower",
-      description: `+10% Overpower.`,
+      name: 'Overpower',
+      description: '+10% Overpower.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -607,8 +607,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     elementalPowerSkill: {
-      name: "Elemental Power",
-      description: `+1% to all Damage Elements.`,
+      name: 'Elemental Power',
+      description: '+1% to all Damage Elements.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -617,8 +617,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     deathSpeaker: {
-      name: "Death Speaker",
-      description: `+2% Curse Skill Damage.`,
+      name: 'Death Speaker',
+      description: '+2% Curse Skill Damage.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
@@ -629,8 +629,8 @@ let warlockMastery = {
   },
   bane: {
     darkBlood: {
-      name: "Dark Blood",
-      description: `+10 Health.`,
+      name: 'Dark Blood',
+      description: '+10 Health.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -640,7 +640,7 @@ let warlockMastery = {
     },
     deathsMarch: {
       name: "Death's March",
-      description: `+1% Movement Speed.`,
+      description: '+1% Movement Speed.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -649,8 +649,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     soulPrison: {
-      name: "Soul Prison",
-      description: `+5% Soul Duration.`,
+      name: 'Soul Prison',
+      description: '+5% Soul Duration.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 5,
@@ -659,8 +659,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     unholyRenewal: {
-      name: "Unholy Renewal",
-      description: `+5% Health Regeneration.`,
+      name: 'Unholy Renewal',
+      description: '+5% Health Regeneration.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 5,
@@ -669,8 +669,8 @@ let warlockMastery = {
       maxRank: 30,
     },
     improvedPotions: {
-      name: "Improved Potions",
-      description: `+3% Potion Effectiveness.`,
+      name: 'Improved Potions',
+      description: '+3% Potion Effectiveness.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 3,
@@ -679,8 +679,8 @@ let warlockMastery = {
       maxRank: 15,
     },
     enhancedResistance: {
-      name: "Enhanced Resistance",
-      description: `+1% Resistance to all Elements.`,
+      name: 'Enhanced Resistance',
+      description: '+1% Resistance to all Elements.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -689,8 +689,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     overpowerSkill: {
-      name: "Overpower",
-      description: `+10% Overpower.`,
+      name: 'Overpower',
+      description: '+10% Overpower.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -699,8 +699,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     elementalPowerSkill: {
-      name: "Elemental Power",
-      description: `+1% to all Damage Elements.`,
+      name: 'Elemental Power',
+      description: '+1% to all Damage Elements.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -709,8 +709,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     battleMage: {
-      name: "Battle Mage",
-      description: `+2% Bane Skill Damage.`,
+      name: 'Battle Mage',
+      description: '+2% Bane Skill Damage.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
@@ -721,8 +721,8 @@ let warlockMastery = {
   },
   sorcery: {
     spellpower: {
-      name: "Spellpower",
-      description: `+10 Damage.`,
+      name: 'Spellpower',
+      description: '+10 Damage.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -731,8 +731,8 @@ let warlockMastery = {
       maxRank: 99999,
     },
     elementalOverload: {
-      name: "Elemental Overload",
-      description: `+1% Critical Hit Chance.`,
+      name: 'Elemental Overload',
+      description: '+1% Critical Hit Chance.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -741,8 +741,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     heightenedMind: {
-      name: "Heightened Mind",
-      description: `+1% Evasion.`,
+      name: 'Heightened Mind',
+      description: '+1% Evasion.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -751,8 +751,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     loyalMinions: {
-      name: "Loyal Minions",
-      description: `+1% Companion Health.`,
+      name: 'Loyal Minions',
+      description: '+1% Companion Health.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -761,8 +761,8 @@ let warlockMastery = {
       maxRank: 30,
     },
     improvedPotions: {
-      name: "Improved Potions",
-      description: `+3% Potion Effectiveness.`,
+      name: 'Improved Potions',
+      description: '+3% Potion Effectiveness.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 3,
@@ -771,8 +771,8 @@ let warlockMastery = {
       maxRank: 15,
     },
     enhancedResistance: {
-      name: "Enhanced Resistance",
-      description: `+1% Resistance to all Elements.`,
+      name: 'Enhanced Resistance',
+      description: '+1% Resistance to all Elements.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -781,8 +781,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     overpowerSkill: {
-      name: "Overpower",
-      description: `+10% Overpower.`,
+      name: 'Overpower',
+      description: '+10% Overpower.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -791,8 +791,8 @@ let warlockMastery = {
       maxRank: 10,
     },
     elementalPowerSkill: {
-      name: "Elemental Power",
-      description: `+1% to all Damage Elements.`,
+      name: 'Elemental Power',
+      description: '+1% to all Damage Elements.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -801,8 +801,8 @@ let warlockMastery = {
       maxRank: 20,
     },
     masterSorcerer: {
-      name: "Master Sorcerer",
-      description: `+2% Sorcery Skill Damage.`,
+      name: 'Master Sorcerer',
+      description: '+2% Sorcery Skill Damage.',
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
