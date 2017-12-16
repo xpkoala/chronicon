@@ -1,0 +1,38 @@
+Fire Mastery
+For every point in this tree, fire damage is increased by 1%
+
+Destruction
+- max rank 20
+- 1% reach per rank
+
+Ignition
+- max rank 0
+- 2% increased *firebomb* and *flashfire* damage per rank
+
+incendiary spells
+- max rank 20
+- 1% increased chance to trigger *combustion*
+
+Animosity
+- max rank 0
+- 2% increased *detonation* and *hell pit* and *heat wave* damage per rank
+
+Blast Wave
+- max rank 100
+- 5% increased damage of *combustion*
+
+pyromaniac
+- max rank 0
+- 2% increased *hellfire* and *firenova* and *wall of fire* damage per rank
+
+burning hells
+- max rank 100
+- 5% increased damage of flaming hells
+
+hell raiser
+- max rank 0
+- 2% increased *inferno* and *meteor* and *fire storm* damage per rank
+
+diabolist
+- 3% reduced cool down of *infernal demon* and *demon spawn*
+
