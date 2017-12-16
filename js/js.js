@@ -1,7 +1,7 @@
 let character = {
   name: '',
   health() {
-    return (ballsSkill * 1.05)
+    return (10 * 1.05)
   },
   mana: 100,
   damage: 0,
@@ -31,7 +31,7 @@ let warlockMastery = {
   fire: {
     destruction: {
       name: "Destruction",
-      description: `+${warlockMastery.fire.destruction.currentRank}% Reach.`,
+      description: `+1% Reach.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 1,
@@ -41,17 +41,17 @@ let warlockMastery = {
     },
     ignition: {
       name: "Ignition",
-      description: `${warlockMastery.fire.ignition.multiplier * warlockMastery.fire.ignition.currentRank} increased damage of *Firebomb* and *Flashfire.`,
+      description: `2% increased damage of *Firebomb* and *Flashfire.`,
       type: ['fire'],
       skillType: 'passive',
-      multiplier: 2
+      multiplier: 2,
       masteryReq: 5,
       currentRank: 0,
       maxRank: 99999,
     },
     incendiarySpells: {
       name: "Incendiary Spells",
-      description: `+${warlockMastery.fire.incendiarySpells.multiplier * warlockMastery.fire.incendiarySpells.currentRank}% chance to trigger *Combustion*.`,
+      description: `+1% chance to trigger *Combustion*.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 1,
@@ -61,7 +61,7 @@ let warlockMastery = {
     },
     animosity: {
       name: "Animosity",
-      description: `${warlockMastery.fire.animosity.multiplier * warlockMastery.fire.animosity.currentRank}% increased *Detonation*, *Hell Pit*, and *Heat Wave* damage per rank.`,
+      description: `2% increased *Detonation*, *Hell Pit*, and *Heat Wave* damage per rank.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 2,
@@ -71,7 +71,7 @@ let warlockMastery = {
     },
     blastWave: {
       name: "Blast Wave",
-      description: `${warlockMastery.fire.blastWave.multiplier * warlockMastery.fire.blastWave.currentRank}% increased damage of *Combustion*.`,
+      description: `5% increased damage of *Combustion*.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 5,
@@ -81,7 +81,7 @@ let warlockMastery = {
     },
     pyromaniac: {
       name: "Pyromaniac",
-      description: `${warlockMastery.fire.pyromaniac.multiplier * warlockMastery.fire.pyromaniac.currentRank}% increased *Hellfire*, *Firenova*, and *Wall of Fire* damage.`,
+      description: `2% increased *Hellfire*, *Firenova*, and *Wall of Fire* damage.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 2,
@@ -91,7 +91,7 @@ let warlockMastery = {
     },
     burningHells: {
       name: "Burning Hells",
-      description: `${warlockMastery.fire.burningHells.multiplier * warlockMastery.fire.burningHells.currentRank}% increased damage of *Flaming Hells*.`,
+      description: `5% increased damage of *Flaming Hells*.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 5,
@@ -101,7 +101,7 @@ let warlockMastery = {
     },
     hellRaiser: {
       name: "Hell Raiser",
-      description: `${warlockMastery.fire.hellRaiser.multiplier * warlockMastery.fire.hellRaiser.currentRank}% increased *Inferno*, *Meteor*, and *Fire Storm* damage per rank.`,
+      description: `2% increased *Inferno*, *Meteor*, and *Fire Storm* damage per rank.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 2,
@@ -111,7 +111,7 @@ let warlockMastery = {
     },
     diabolist: {
       name: "Diabolist",
-      description: `${warlockMastery.fire.diabolist.multiplier * warlockMastery.fire.diabolist.currentRank}% reduced cool down of *Infernal Demon* and *Demon Spawn*.`,
+      description: `3% reduced cool down of *Infernal Demon* and *Demon Spawn*.`,
       type: ['fire'],
       skillType: 'passive',
       multiplier: 3,
@@ -123,7 +123,7 @@ let warlockMastery = {
   shadow: {
     soulDrain: {
       name: "Soul Drain",
-      description: `${warlockMastery.shadow.soulDrain.currentRank}% Mana.`,
+      description: `1% Mana.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 1,
@@ -133,7 +133,7 @@ let warlockMastery = {
     },
     necromancy: {
       name: "Necromancy",
-      description: `${warlockMastery.shadow.necromancy.currentRank * warlockMastery.shadow.necromancy.multiplier}% increased damage of *Screaming Skull* and *Hand of Death*.`,
+      description: `2% increased damage of *Screaming Skull* and *Hand of Death*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -143,7 +143,7 @@ let warlockMastery = {
     },
     deathblow: {
       name: "Deathblow",
-      description: `${warlockMastery.shadow.deathblow.currentRank}% chance to trigger *Sudden Death*.`,
+      description: `1% chance to trigger *Sudden Death*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 1,
@@ -153,7 +153,7 @@ let warlockMastery = {
     },
     dontFearTheReaper: {
       name: "Don't Fear The Reaper",
-      description: `${warlockMastery.shadow.dontFearTheReaper.currentRank * warlockMastery.shadow.dontFearTheReaper.multiplier}% increased damage of *Life Reap*, *Curse of Woe*, and *Grave Blast*.`,
+      description: `2% increased damage of *Life Reap*, *Curse of Woe*, and *Grave Blast*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -163,7 +163,7 @@ let warlockMastery = {
     },
     darkLust: {
       name: "Dark Lust",
-      description: `${warlockMastery.shadow.darkLust.currentRank}% increased effect of *Masochism*.`,
+      description: `1% increased effect of *Masochism*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 1,
@@ -173,7 +173,7 @@ let warlockMastery = {
     },
     agony: {
       name: "Agony",
-      description: `${warlockMastery.shadow.agony.currentRank * warlockMastery.shadow.agony.multiplier}% increased damage of *Curse of Terror*, *Curse of Reckoning*, and *Bone Spears*.`,
+      description: `2% increased damage of *Curse of Terror*, *Curse of Reckoning*, and *Bone Spears*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -183,7 +183,7 @@ let warlockMastery = {
     },
     sorrow: {
       name: "Sorrow",
-      description: `${warlockMastery.shadow.sorrow.currentRank * warlockMastery.shadow.sorrow.multiplier}% increased damage of *Desecration*.`,
+      description: `5% increased damage of *Desecration*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 5,
@@ -193,7 +193,7 @@ let warlockMastery = {
     },
     boneCharmer: {
       name: "Bone Charmer",
-      description: `${warlockMastery.shadow.boneCharmer.currentRank * warlockMastery.shadow.boneCharmer.multiplier}% increased damage of *Bone Scythe*, *Bone Storm*, and *Bone Curse*.`,
+      description: `2% increased damage of *Bone Scythe*, *Bone Storm*, and *Bone Curse*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 2,
@@ -203,7 +203,7 @@ let warlockMastery = {
     },
     darkLord: {
       name: "Dark Lord",
-      description: `${warlockMastery.shadow.darkLord.currentRank * warlockMastery.shadow.darkLord.multiplier}% reduced cooldown of *Death Knight*, *Vampire Lord*, and *Raise Dead*.`,
+      description: `3% reduced cooldown of *Death Knight*, *Vampire Lord*, and *Raise Dead*.`,
       type: ['Shadow'],
       skillType: 'passive',
       multiplier: 3,
@@ -215,7 +215,7 @@ let warlockMastery = {
   frost: {
     skullShatter: {
       name: "Skull Shatter",
-      description: `+${warlockMastery.frost.skullShatter.currentRank}% Critical Hit Damage.`,
+      description: `+1% Critical Hit Damage.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 1,
@@ -225,7 +225,7 @@ let warlockMastery = {
     },
     eternalCold: {
       name: "Eternal Cold",
-      description: `${warlockMastery.frost.eternalCold.currentRank * warlockMastery.frost.eternalCold.multiplier}% increased damage of *Frost Spear* and *Frozen Flash*.`,
+      description: `2% increased damage of *Frost Spear* and *Frozen Flash*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -235,7 +235,7 @@ let warlockMastery = {
     },
     frozenCorpses: {
       name: "Frozen Corpses",
-      description: `+${warlockMastery.frost.frozenCorpses.currentRank}% chance to trigger *Corpse Shatter*.`,
+      description: `+1% chance to trigger *Corpse Shatter*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 1,
@@ -245,7 +245,7 @@ let warlockMastery = {
     },
     frozenSkull: {
       name: "Frozen Skull",
-      description: `${warlockMastery.frost.frozenSkull.currentRank * warlockMastery.frost.frozenSkull.multiplier}% increased damage of *Serrated Spears*, *Skull Bomb*, and *Ruin*.`,
+      description: `2% increased damage of *Serrated Spears*, *Skull Bomb*, and *Ruin*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -255,7 +255,7 @@ let warlockMastery = {
     },
     iceShield: {
       name: "Ice Shield",
-      description: `${warlockMastery.frost.iceShield.currentRank * warlockMastery.frost.iceShield.multiplier}% increased damage absorbed by *Frozen Veil*.`,
+      description: `5% increased damage absorbed by *Frozen Veil*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 5,
@@ -265,7 +265,7 @@ let warlockMastery = {
     },
     deathChill: {
       name: "Death Chill",
-      description: `${warlockMastery.frost.deathChill.currentRank * warlockMastery.frost.deathChill.multiplier}% increased damage of *Frigid Star*, *Frost Nova*, and *Frozen Fate*.`,
+      description: `2% increased damage of *Frigid Star*, *Frost Nova*, and *Frozen Fate*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -275,7 +275,7 @@ let warlockMastery = {
     },
     freezingDeath: {
       name: "Freezing Death",
-      description: `${warlockMastery.frost.freezingDeath.currentRank * warlockMastery.frost.freezingDeath.multiplier}% increased damage of *Cold Death*.`,
+      description: `5% increased damage of *Cold Death*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 5,
@@ -285,7 +285,7 @@ let warlockMastery = {
     },
     coldPassion: {
       name: "Cold Passion",
-      description: `${warlockMastery.frost.coldPassion.currentRank * warlockMastery.frost.coldPassion.multiplier}% increased damage of *Comet*, *Deathly Barrage*, and *Curse of Doom*.`,
+      description: `2% increased damage of *Comet*, *Deathly Barrage*, and *Curse of Doom*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 2,
@@ -293,9 +293,9 @@ let warlockMastery = {
       currentRank: 0,
       maxRank: 99999,
     },
-    deeathsGift: {
+    deathsGift: {
       name: "Death's Gift",
-      description: `${warlockMastery.frost.deeathsGift.currentRank * warlockMastery.frost.deeathsGift.multiplier}% reduced cooldown of *Frozen Death* and *Lich Form*.`,
+      description: `3% reduced cooldown of *Frozen Death* and *Lich Form*.`,
       type: ['Frost'],
       skillType: 'passive',
       multiplier: 3,
@@ -307,7 +307,7 @@ let warlockMastery = {
   poison: {
     rapidInfections: {
       name: "Rapid Infections",
-      description: `+${warlockMastery.poison.rapidInfections.currentRank}% Attack Speed.`,
+      description: `+1% Attack Speed.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 1,
@@ -317,7 +317,7 @@ let warlockMastery = {
     },
     rottingFlesh: {
       name: "Rotting Flesh",
-      description: `${warlockMastery.poison.rottingFlesh.currentRank * warlockMastery.poison.rottingFlesh.multiplier}% increased damage of *Poison Bolt* and *Blood Curse*.`,
+      description: `2% increased damage of *Poison Bolt* and *Blood Curse*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -327,7 +327,7 @@ let warlockMastery = {
     },
     taint: {
       name: "Taint",
-      description: `${warlockMastery.poison.taint.currentRank}% increased chance to trigger *Outbreak*.`,
+      description: `1% increased chance to trigger *Outbreak*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 1,
@@ -337,7 +337,7 @@ let warlockMastery = {
     },
     contamination: {
       name: "Contamination",
-      description: `${warlockMastery.poison.contamination.currentRank * warlockMastery.poison.contamination.multiplier}% increased damage of *Poison Skull*, *Plauge*, and *Flesh Rot*.`,
+      description: `2% increased damage of *Poison Skull*, *Plauge*, and *Flesh Rot*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -347,7 +347,7 @@ let warlockMastery = {
     },
     infusedBlood: {
       name: "Infused Blood",
-      description: `${warlockMastery.poison.infusedBlood.currentRank}% increased chance to trigger *Living Blood*.`,
+      description: `1% increased chance to trigger *Living Blood*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 1,
@@ -357,7 +357,7 @@ let warlockMastery = {
     },
     defilement: {
       name: "Defilement",
-      description: `${warlockMastery.poison.defilement.currentRank * warlockMastery.poison.defilement.multiplier}% increased damage of *Poison Nova*, *Bane of the Dead*, and *Mind Torture*.`,
+      description: `2% increased damage of *Poison Nova*, *Bane of the Dead*, and *Mind Torture*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -367,7 +367,7 @@ let warlockMastery = {
     },
     infectionsDisease: {
       name: "Infectious Disease",
-      description: `${warlockMastery.poison.infectionsDisease.currentRank * warlockMastery.poison.infectionsDisease.multiplier}% increased damage of *Infection*.`,
+      description: `5% increased damage of *Infection*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 5,
@@ -377,7 +377,7 @@ let warlockMastery = {
     },
     sickness: {
       name: "Sickness",
-      description: `${warlockMastery.poison.sickness.currentRank * warlockMastery.poison.sickness.multiplier}% increased damage of *Vile Pool*, *Affliction*, and *Corruption*.`,
+      description: `2% increased damage of *Vile Pool*, *Affliction*, and *Corruption*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 2,
@@ -387,7 +387,7 @@ let warlockMastery = {
     },
     malignancy: {
       name: "Malignancy",
-      description: `${warlockMastery.poison.malignancy.currentRank * warlockMastery.poison.malignancy.multiplier}% reduced cooldown of *Plague Lord* and *Cloak of Infection*.`,
+      description: `3% reduced cooldown of *Plague Lord* and *Cloak of Infection*.`,
       type: ['Poison'],
       skillType: 'passive',
       multiplier: 3,
@@ -399,7 +399,7 @@ let warlockMastery = {
   curse: {
     soulDrinker: {
       name: "Soul Drinker",
-      description: `+${warlockMastery.curse.soulDrinker.currentRank} Mana.`,
+      description: `+10 Mana.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -409,7 +409,7 @@ let warlockMastery = {
     },
     jinxed: {
       name: "Jinxed",
-      description: `+${warlockMastery.curse.jinxed.currentRank * warlockMastery.curse.jinxed.multiplier}% Effect Duration.`,
+      description: `+2% Effect Duration.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
@@ -419,7 +419,7 @@ let warlockMastery = {
     },
     soulVessels: {
       name: "Soul Vessels",
-      description: `+${warlockMastery.curse.soulVessels.currentRank} Maximum Souls.`,
+      description: `+1 Maximum Souls.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -429,7 +429,7 @@ let warlockMastery = {
     },
     frenziedMinions: {
       name: "Frenzied Minions",
-      description: `+${warlockMastery.curse.frenziedMinions.currentRank}% Companion Damage.`,
+      description: `+1% Companion Damage.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -439,7 +439,7 @@ let warlockMastery = {
     },
     improvedPotions: {
       name: "Improved Potions",
-      description: `+${warlockMastery.curse.improvedPotions.currentRank * warlockMastery.curse.improvedPotions.multiplier}% Potion Effectiveness.`,
+      description: `+3% Potion Effectiveness.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 3,
@@ -449,7 +449,7 @@ let warlockMastery = {
     },
     enhancedResistance: {
       name: "Enhanced Resistance",
-      description: `+${warlockMastery.curse.enhancedResistance.currentRank}% Resistance to all Elements.`,
+      description: `+1% Resistance to all Elements.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -459,7 +459,7 @@ let warlockMastery = {
     },
     overpowerSkill: {
       name: "Overpower",
-      description: `+${warlockMastery.curse.overpowerSkill.currentRank}% Overpower.`,
+      description: `+10% Overpower.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -469,7 +469,7 @@ let warlockMastery = {
     },
     elementalPowerSkill: {
       name: "Elemental Power",
-      description: `+${warlockMastery.curse.elementalPowerSkill.currentRank}% to all Damage Elements.`,
+      description: `+1% to all Damage Elements.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -479,7 +479,7 @@ let warlockMastery = {
     },
     deathSpeaker: {
       name: "Death Speaker",
-      description: `+${warlockMastery.curse.deathSpeaker.currentRank * warlockMastery.curse.deathSpeaker.multiplier}% Curse Skill Damage.`,
+      description: `+2% Curse Skill Damage.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
@@ -491,7 +491,7 @@ let warlockMastery = {
   bane: {
     darkBlood: {
       name: "Dark Blood",
-      description: `+${warlockMastery.bane.darkBlood.currentRank * warlockMastery.bane.darkBlood.multiplier} Health.`,
+      description: `+10 Health.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -501,7 +501,7 @@ let warlockMastery = {
     },
     deathsMarch: {
       name: "Death's March",
-      description: `+${warlockMastery.bane.deathsMarch.currentRank}% Movement Speed.`,
+      description: `+1% Movement Speed.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -511,7 +511,7 @@ let warlockMastery = {
     },
     soulPrison: {
       name: "Soul Prison",
-      description: `+${warlockMastery.bane.soulPrison.currentRank * warlockMastery.bane.soulPrison.multiplier}% Soul Duration.`,
+      description: `+5% Soul Duration.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 5,
@@ -521,7 +521,7 @@ let warlockMastery = {
     },
     unholyRenewal: {
       name: "Unholy Renewal",
-      description: `+${warlockMastery.bane.unholyRenewal.currentRank}% Health Regeneration.`,
+      description: `+5% Health Regeneration.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 5,
@@ -531,7 +531,7 @@ let warlockMastery = {
     },
     improvedPotions: {
       name: "Improved Potions",
-      description: `+${warlockMastery.bane.improvedPotions.currentRank * warlockMastery.bane.improvedPotions.multiplier}% Potion Effectiveness.`,
+      description: `+3% Potion Effectiveness.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 3,
@@ -541,7 +541,7 @@ let warlockMastery = {
     },
     enhancedResistance: {
       name: "Enhanced Resistance",
-      description: `+${warlockMastery.bane.enhancedResistance.currentRank}% Resistance to all Elements.`,
+      description: `+1% Resistance to all Elements.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -551,7 +551,7 @@ let warlockMastery = {
     },
     overpowerSkill: {
       name: "Overpower",
-      description: `+${warlockMastery.bane.overpowerSkill.currentRank}% Overpower.`,
+      description: `+10% Overpower.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -561,7 +561,7 @@ let warlockMastery = {
     },
     elementalPowerSkill: {
       name: "Elemental Power",
-      description: `+${warlockMastery.bane.elementalPowerSkill.currentRank}% to all Damage Elements.`,
+      description: `+1% to all Damage Elements.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -571,7 +571,7 @@ let warlockMastery = {
     },
     battleMage: {
       name: "Battle Mage",
-      description: `+${warlockMastery.bane.battleMage.currentRank}% Bane Skill Damage.`,
+      description: `+2% Bane Skill Damage.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
@@ -583,7 +583,7 @@ let warlockMastery = {
   sorcery: {
     spellpower: {
       name: "Spellpower",
-      description: `+${warlockMastery.sorcery.spellpower.currentRank * warlockMastery.sorcery.spellpower.multiplier} Damage.`,
+      description: `+10 Damage.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -593,7 +593,7 @@ let warlockMastery = {
     },
     elementalOverload: {
       name: "Elemental Overload",
-      description: `+${warlockMastery.sorcery.elementalOverload.currentRank}% Critical Hit Chance.`,
+      description: `+1% Critical Hit Chance.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -603,7 +603,7 @@ let warlockMastery = {
     },
     heightenedMind: {
       name: "Heightened Mind",
-      description: `+${warlockMastery.sorcery.heightenedMind.currentRank}% Evasion.`,
+      description: `+1% Evasion.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -613,7 +613,7 @@ let warlockMastery = {
     },
     loyalMinions: {
       name: "Loyal Minions",
-      description: `+${warlockMastery.sorcery.loyalMinions.currentRank}% Companion Health.`,
+      description: `+1% Companion Health.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -623,7 +623,7 @@ let warlockMastery = {
     },
     improvedPotions: {
       name: "Improved Potions",
-      description: `+${warlockMastery.sorcery.improvedPotions.currentRank * warlockMastery.sorcery.improvedPotions.multiplier}% Potion Effectiveness.`,
+      description: `+3% Potion Effectiveness.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 3,
@@ -633,7 +633,7 @@ let warlockMastery = {
     },
     enhancedResistance: {
       name: "Enhanced Resistance",
-      description: `+${warlockMastery.sorcery.enhancedResistance.currentRank}% Resistance to all Elements.`,
+      description: `+1% Resistance to all Elements.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -643,7 +643,7 @@ let warlockMastery = {
     },
     overpowerSkill: {
       name: "Overpower",
-      description: `+${warlockMastery.sorcery.overpowerSkill.currentRank}% Overpower.`,
+      description: `+10% Overpower.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 10,
@@ -653,7 +653,7 @@ let warlockMastery = {
     },
     elementalPowerSkill: {
       name: "Elemental Power",
-      description: `+${warlockMastery.sorcery.elementalPowerSkill.currentRank}% to all Damage Elements.`,
+      description: `+1% to all Damage Elements.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 1,
@@ -663,7 +663,7 @@ let warlockMastery = {
     },
     masterSorcerer: {
       name: "Master Sorcerer",
-      description: `+${warlockMastery.sorcery.masterSorcerer.currentRank * warlockMastery.sorcery.masterSorcerer.multiplier}% Sorcery Skill Damage.`,
+      description: `+2% Sorcery Skill Damage.`,
       type: ['Ethereal'],
       skillType: 'passive',
       multiplier: 2,
@@ -672,5 +672,4 @@ let warlockMastery = {
       maxRank: 10,
     },
   },
-}
 };

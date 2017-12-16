@@ -13,7 +13,26 @@
     </header>
     <main>
         <div class="tool-container">
-
+            <select>
+                <option>Warlock</option>
+            </select>
+            <div class="skill-tree">
+                <div class="mastery">
+                    <p>Fire</p>
+                    <div class="skills-container">
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/fire_mastery.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/destruction.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/ignition.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/incendiary_spells.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/animosity.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/blast_wave.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/pyromaniac.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/burning_hells.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/hellraiser.png" /><p>0</p></div>
+                        <div><img class="skill-img" src="img/warlock/mastery/fire/diabolist.png" /><p>0</p></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -22,4 +41,25 @@
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/js.js"></script>
+<script>
+
+  document.oncontextmenu = function() {
+    return false;
+  };
+
+    $(() => {
+      $('.skill-img').click(function(e) {
+        let current = parseInt($(this).next().html());
+        current += 1;
+        $(this).next().html(current);
+      })
+        .mousedown(function(e){
+          if(e.which === 3) {
+            let current = parseInt($(this).next().html());
+            current -= 1;
+            $(this).next().html(current);
+          }
+        })
+    })
+</script>
 </html>
