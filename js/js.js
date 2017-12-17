@@ -168,6 +168,10 @@ const characterWarlock = {
 
 let warlockMastery = {
   fire: {
+    fireMastery: {
+      name: 'Fire Mastery',
+      image: './img/warlock/mastery/fire/fire_mastery.png',
+    },
     destruction: {
       name: 'Destruction',
       description: '+1% Reach.',
@@ -177,7 +181,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 20,
-      image: '../img/warlock/mastery/fire/destruction.png',
+      image: './img/warlock/mastery/fire/destruction.png',
     },
     ignition: {
       name: 'Ignition',
@@ -188,7 +192,7 @@ let warlockMastery = {
       masteryReq: 5,
       currentRank: 0,
       maxRank: 99999,
-      image: '../img/warlock/mastery/fire/ignition.png',
+      image: './img/warlock/mastery/fire/ignition.png',
     },
     incendiarySpells: {
       name: 'Incendiary Spells',
@@ -199,7 +203,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 20,
-      image: '../img/warlock/mastery/fire/incendiary_spells.png',
+      image: './img/warlock/mastery/fire/incendiary_spells.png',
     },
     animosity: {
       name: 'Animosity',
@@ -210,7 +214,7 @@ let warlockMastery = {
       masteryReq: 15,
       currentRank: 0,
       maxRank: 99999,
-      image: '../img/warlock/mastery/fire/animosity.png',
+      image: './img/warlock/mastery/fire/animosity.png',
     },
     blastWave: {
       name: 'Blast Wave',
@@ -221,7 +225,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 100,
-      image: '../img/warlock/mastery/fire/blast_wave.png',
+      image: './img/warlock/mastery/fire/blast_wave.png',
     },
     pyromaniac: {
       name: 'Pyromaniac',
@@ -232,7 +236,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 99999,
-      image: '../img/warlock/mastery/fire/pyromaniac.png',
+      image: './img/warlock/mastery/fire/pyromaniac.png',
     },
     burningHells: {
       name: 'Burning Hells',
@@ -243,7 +247,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 100,
-      image: '../img/warlock/mastery/fire/burning_hells.png',
+      image: './img/warlock/mastery/fire/burning_hells.png',
     },
     hellRaiser: {
       name: 'Hell Raiser',
@@ -254,7 +258,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 99999,
-      image: '../img/warlock/mastery/fire/hellraiser.png',
+      image: './img/warlock/mastery/fire/hellraiser.png',
     },
     diabolist: {
       name: 'Diabolist',
@@ -265,10 +269,14 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 20,
-      image: '../img/warlock/mastery/fire/diabolist.png',
+      image: './img/warlock/mastery/fire/diabolist.png',
     },
   },
   shadow: {
+    shadowMastery: {
+      name: 'Shadow Mastery',
+      image: './img/warlock/mastery/shadow/shadow_mastery.png'
+    },
     soulDrain: {
       name: 'Soul Drain',
       description: '1% Mana.',
@@ -278,6 +286,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/shadow/soul_drain.png',
     },
     necromancy: {
       name: 'Necromancy',
@@ -288,6 +297,7 @@ let warlockMastery = {
       masteryReq: 5,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/shadow/necromancy.png',
     },
     deathblow: {
       name: 'Deathblow',
@@ -298,6 +308,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/shadow/deathblow.png',
     },
     dontFearTheReaper: {
       name: "Don't Fear The Reaper",
@@ -308,6 +319,7 @@ let warlockMastery = {
       masteryReq: 15,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/shadow/dont_fear_the_reaper.png',
     },
     darkLust: {
       name: 'Dark Lust',
@@ -318,6 +330,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/shadow/dark_lust.png',
     },
     agony: {
       name: 'Agony',
@@ -328,6 +341,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/shadow/agony.png',
     },
     sorrow: {
       name: 'Sorrow',
@@ -338,6 +352,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 100,
+      image: './img/warlock/mastery/shadow/sorrow.png',
     },
     boneCharmer: {
       name: 'Bone Charmer',
@@ -348,6 +363,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/shadow/bone_charmer.png',
     },
     darkLord: {
       name: 'Dark Lord',
@@ -358,9 +374,14 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 5,
+      image: './img/warlock/mastery/shadow/dark_lord.png',
     },
   },
   frost: {
+    frostMastery: {
+      name: 'Frost Mastery',
+      image: './img/warlock/mastery/frost/frost_mastery.png'
+    },
     skullShatter: {
       name: 'Skull Shatter',
       description: '+1% Critical Hit Damage.',
@@ -370,6 +391,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/frost/skull_shatter.png',
     },
     eternalCold: {
       name: 'Eternal Cold',
@@ -380,6 +402,7 @@ let warlockMastery = {
       masteryReq: 5,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/frost/eternal_cold.png',
     },
     frozenCorpses: {
       name: 'Frozen Corpses',
@@ -390,6 +413,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/frost/frozen_corpses.png',
     },
     frozenSkull: {
       name: 'Frozen Skull',
@@ -400,6 +424,7 @@ let warlockMastery = {
       masteryReq: 15,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/frost/frozen_skull.png',
     },
     iceShield: {
       name: 'Ice Shield',
@@ -410,6 +435,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/frost/ice_shield.png',
     },
     deathChill: {
       name: 'Death Chill',
@@ -420,6 +446,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/frost/death_chill.png',
     },
     freezingDeath: {
       name: 'Freezing Death',
@@ -430,6 +457,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 100,
+      image: './img/warlock/mastery/frost/freezing_death.png',
     },
     coldPassion: {
       name: 'Cold Passion',
@@ -440,6 +468,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/frost/cold_passion.png',
     },
     deathsGift: {
       name: "Death's Gift",
@@ -450,9 +479,14 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 5,
+      image: './img/warlock/mastery/frost/deaths_gift.png',
     },
   },
   poison: {
+    poisonMastery: {
+      name: 'Poison Mastery',
+      image: './img/warlock/mastery/poison/poison_mastery.png'
+    },
     rapidInfections: {
       name: 'Rapid Infections',
       description: '+1% Attack Speed.',
@@ -462,6 +496,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/poison/rapid_infections.png',
     },
     rottingFlesh: {
       name: 'Rotting Flesh',
@@ -472,6 +507,7 @@ let warlockMastery = {
       masteryReq: 5,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/poison/rotting_flesh.png',
     },
     taint: {
       name: 'Taint',
@@ -482,6 +518,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/poison/taint.png',
     },
     contamination: {
       name: 'Contamination',
@@ -492,6 +529,7 @@ let warlockMastery = {
       masteryReq: 15,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/poison/contamination.png',
     },
     infusedBlood: {
       name: 'Infused Blood',
@@ -502,6 +540,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/poison/infused_blood.png',
     },
     defilement: {
       name: 'Defilement',
@@ -512,6 +551,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/poison/defilement.png',
     },
     infectionsDisease: {
       name: 'Infectious Disease',
@@ -522,6 +562,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 100,
+      image: './img/warlock/mastery/poison/infectious_disease.png',
     },
     sickness: {
       name: 'Sickness',
@@ -532,6 +573,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/poison/sickness.png',
     },
     malignancy: {
       name: 'Malignancy',
@@ -542,9 +584,14 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 5,
+      image: './img/warlock/mastery/poison/malignancy.png',
     },
   },
   curse: {
+    curseMastery: {
+      name: 'Curse Mastery',
+      image: './img/warlock/mastery/curse/curse_mastery.png',
+    },
     soulDrinker: {
       name: 'Soul Drinker',
       description: '+10 Mana.',
@@ -554,6 +601,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/curse/soul_drinker.png',
     },
     jinxed: {
       name: 'Jinxed',
@@ -564,6 +612,7 @@ let warlockMastery = {
       masteryReq: 5,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/curse/jinxed.png',
     },
     soulVessels: {
       name: 'Soul Vessels',
@@ -574,6 +623,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 5,
+      image: './img/warlock/mastery/curse/soul_vessels.png',
     },
     frenziedMinions: {
       name: 'Frenzied Minions',
@@ -584,6 +634,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 15,
       maxRank: 30,
+      image: './img/warlock/mastery/curse/frenzied_minions.png',
     },
     improvedPotions: {
       name: 'Improved Potions',
@@ -594,6 +645,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 15,
+      image: './img/warlock/mastery/curse/improved_potions_curse.png',
     },
     enhancedResistance: {
       name: 'Enhanced Resistance',
@@ -604,6 +656,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/curse/enhanced_resistance_curse.png',
     },
     overpowerSkill: {
       name: 'Overpower',
@@ -614,6 +667,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/curse/overpower_curse.png',
     },
     elementalPowerSkill: {
       name: 'Elemental Power',
@@ -624,6 +678,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/curse/elemental_power_curse.png',
     },
     deathSpeaker: {
       name: 'Death Speaker',
@@ -634,9 +689,14 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/curse/death_speaker.png',
     },
   },
   bane: {
+    baneMastery: {
+      name: 'Bane Mastery',
+      image: './img/warlock/mastery/bane/bane_mastery.png'
+    },
     darkBlood: {
       name: 'Dark Blood',
       description: '+10 Health.',
@@ -646,6 +706,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/bane/dark_blood.png',
     },
     deathsMarch: {
       name: "Death's March",
@@ -656,6 +717,7 @@ let warlockMastery = {
       umasteryReq: 5,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/bane/deaths_march.png',
     },
     soulPrison: {
       name: 'Soul Prison',
@@ -666,6 +728,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/bane/soul_prison.png',
     },
     unholyRenewal: {
       name: 'Unholy Renewal',
@@ -676,6 +739,7 @@ let warlockMastery = {
       masteryReq: 15,
       currentRank: 0,
       maxRank: 30,
+      image: './img/warlock/mastery/bane/unholy_renewal.png',
     },
     improvedPotions: {
       name: 'Improved Potions',
@@ -686,6 +750,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 15,
+      image: './img/warlock/mastery/bane/improved_potions_bane.png',
     },
     enhancedResistance: {
       name: 'Enhanced Resistance',
@@ -696,6 +761,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/bane/enhanced_resistance_bane.png',
     },
     overpowerSkill: {
       name: 'Overpower',
@@ -706,6 +772,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/bane/overpower_bane.png',
     },
     elementalPowerSkill: {
       name: 'Elemental Power',
@@ -716,6 +783,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/bane/elemental_power_bane.png',
     },
     battleMage: {
       name: 'Battle Mage',
@@ -726,9 +794,14 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/bane/battle_mage.png',
     },
   },
   sorcery: {
+    sorceryMastery: {
+      name: 'Sorcery Mastery',
+      image: './img/warlock/mastery/sorcery/sorcery_mastery.png'
+    },
     spellpower: {
       name: 'Spellpower',
       description: '+10 Damage.',
@@ -738,6 +811,7 @@ let warlockMastery = {
       masteryReq: 0,
       currentRank: 0,
       maxRank: 99999,
+      image: './img/warlock/mastery/sorcery/spellpower.png',
     },
     elementalOverload: {
       name: 'Elemental Overload',
@@ -748,6 +822,7 @@ let warlockMastery = {
       masteryReq: 5,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/sorcery/elemental_overload.png',
     },
     heightenedMind: {
       name: 'Heightened Mind',
@@ -758,6 +833,7 @@ let warlockMastery = {
       masteryReq: 10,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/sorcery/heightened_mind.png',
     },
     loyalMinions: {
       name: 'Loyal Minions',
@@ -768,6 +844,7 @@ let warlockMastery = {
       masteryReq: 15,
       currentRank: 0,
       maxRank: 30,
+      image: './img/warlock/mastery/sorcery/loyal_minions.png',
     },
     improvedPotions: {
       name: 'Improved Potions',
@@ -778,6 +855,7 @@ let warlockMastery = {
       masteryReq: 20,
       currentRank: 0,
       maxRank: 15,
+      image: './img/warlock/mastery/sorcery/improved_potions_sorcery.png',
     },
     enhancedResistance: {
       name: 'Enhanced Resistance',
@@ -788,6 +866,7 @@ let warlockMastery = {
       masteryReq: 25,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/sorcery/enhanced_resistance_sorcery.png',
     },
     overpowerSkill: {
       name: 'Overpower',
@@ -798,6 +877,7 @@ let warlockMastery = {
       masteryReq: 30,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/sorcery/overpower_sorcery.png',
     },
     elementalPowerSkill: {
       name: 'Elemental Power',
@@ -808,6 +888,7 @@ let warlockMastery = {
       masteryReq: 35,
       currentRank: 0,
       maxRank: 20,
+      image: './img/warlock/mastery/sorcery/elemental_power_sorcery.png',
     },
     masterSorcerer: {
       name: 'Master Sorcerer',
@@ -818,6 +899,7 @@ let warlockMastery = {
       masteryReq: 40,
       currentRank: 0,
       maxRank: 10,
+      image: './img/warlock/mastery/sorcery/master_sorcerer.png',
     },
   },
 };

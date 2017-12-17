@@ -37,10 +37,14 @@ main {
 
 .mastery {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .skills-container {
-    width: 100%;
+    width: 600px;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -17,21 +17,6 @@
                 <option>Warlock</option>
             </select>
             <div class="skill-tree">
-                <div class="mastery">
-                    <p>Fire</p>
-                    <div class="skills-container">
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/fire_mastery.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/destruction.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/ignition.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/incendiary_spells.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/animosity.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/blast_wave.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/pyromaniac.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/burning_hells.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/hellraiser.png" /><p>0</p></div>
-                        <div><img class="skill-img" src="img/warlock/mastery/fire/diabolist.png" /><p>0</p></div>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
@@ -42,24 +27,62 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/js.js"></script>
 <script>
-
   document.oncontextmenu = function() {
     return false;
   };
 
     $(() => {
-      $('.skill-img').click(function(e) {
-        let current = parseInt($(this).next().html());
-        current += 1;
-        $(this).next().html(current);
-      })
-        .mousedown(function(e){
-          if(e.which === 3) {
-            let current = parseInt($(this).next().html());
-            current -= 1;
-            $(this).next().html(current);
+      const skillTree = $('.skill-tree');
+
+      function populate() {
+        let newMastery;
+        for (const mastery in warlockMastery) {
+          const currentMastery = warlockMastery[mastery];
+          newMastery = new $('<div />');
+          newMastery.addClass('mastery');
+          const newContainer = new $('<div />');
+          newContainer.addClass('skills-container');
+          for (const skill in currentMastery) {
+            const divContainer = new $('<div />');
+            const imgSrc = currentMastery[skill].image;
+            const skillImg = new $('<img />', {'src': imgSrc} );
+            skillImg.addClass('skill-img');
+            skillImg.attr('max', currentMastery[skill].maxRank);
+            divContainer.append(skillImg);
+            const counter = new $('<p />');
+            counter.html('0');
+            divContainer.append(counter);
+            newContainer.append(divContainer);
           }
-        })
+          newMastery.append(newContainer);
+          skillTree.append(newMastery);
+        }
+      }
+
+      populate();
+
+      $(document).on('click', '.skill-img', function(e) {
+        let current = parseInt($(this).next().html());
+        let rowCurrent = parseInt($(this).parent().parent().children(':first-child').children(':first-child').next().html());
+        if(current < $(this).attr('max') && ($(this).attr('max')) !== undefined) {
+          current += 1;
+          rowCurrent += 1;
+          $(this).next().html(current);
+          $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent);
+        }
+      });
+      $(document).on('mousedown', '.skill-img', function(e){
+        if(e.which === 3) {
+          let current = parseInt($(this).next().html());
+          let rowCurrent = parseInt($(this).parent().parent().children(':first-child').children(':first-child').next().html());
+          if(current > 0 && ($(this).attr('max')) !== undefined) {
+            current -= 1;
+            rowCurrent -= 1;
+            $(this).next().html(current);
+            $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent)
+          }
+        }
+      })
     })
 </script>
 </html>
