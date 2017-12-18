@@ -27,9 +27,10 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/js.js"></script>
 <script>
-  document.oncontextmenu = function() {
+
+    document.oncontextmenu = function() {
     return false;
-  };
+    };
 
     $(() => {
       const skillTree = $('.skill-tree');
@@ -44,6 +45,7 @@
           newContainer.addClass('skills-container');
           for (const skill in currentMastery) {
             const divContainer = new $('<div />');
+            divContainer.addClass('skill');
             const imgSrc = currentMastery[skill].image;
             const skillImg = new $('<img />', {'src': imgSrc} );
             skillImg.addClass('skill-img');
@@ -97,19 +99,24 @@
         }
         populateCharacter();
       });
+
       $(document).on('mousedown', '.skill-img', function(e){
         if(e.which === 3) {
           let current = parseInt($(this).next().html());
           let rowCurrent = parseInt($(this).parent().parent().children(':first-child').children(':first-child').next().html());
           if(current > 0 && ($(this).attr('max')) !== undefined) {
-            current -= 1;
-            rowCurrent -= 1;
-            $(this).next().html(current);
-            $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent);
-            const skillMastery = $(this).attr('mastery');
-            const skillName = $(this).attr('skill');
-            const character = $(this).attr('character');
-            window[character][skillMastery][skillName].currentRank -= 1;
+            if($(this).parent().next().children(':first-child').next().html() > 0) {
+              alert('Cannot remove until skills to the right are empty')
+            } else {
+              current -= 1;
+              rowCurrent -= 1;
+              $(this).next().html(current);
+              $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent);
+              const skillMastery = $(this).attr('mastery');
+              const skillName = $(this).attr('skill');
+              const character = $(this).attr('character');
+              window[character][skillMastery][skillName].currentRank -= 1;
+            }
           }
         }
         populateCharacter();
@@ -117,6 +124,6 @@
 
       populateSkills();
       populateCharacter();
-    })
+    });
 </script>
 </html>
