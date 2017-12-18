@@ -3,165 +3,165 @@ const characterWarlock = {
   healthBonus() {
     let health = 0;
     health += (warlockMastery.bane.darkBlood.currentRank * warlockMastery.bane.darkBlood.multiplier);
-    return ({name: 'Health Bonus', value: health});
+    return ({ name: 'Health Bonus', value: health });
   },
   healthPercent() {
     const healthPercentage = 0;
-    return ({name: 'Health Percent', value: healthPercentage});
+    return ({ name: 'Health Percent', value: healthPercentage });
   },
   healthPerSecond() {
     let healthPerSecond = 0;
     healthPerSecond += (warlockMastery.bane.unholyRenewal.currentRank * warlockMastery.bane.unholyRenewal.multiplier);
-    return ({name: 'Health Per Second', value: healthPerSecond});
+    return ({ name: 'Health Per Second', value: healthPerSecond });
   },
   healthOnHit() {
     const healthOnHit = 0;
-    return ({name: 'Health On Hit', value: healthOnHit});
+    return ({ name: 'Health On Hit', value: healthOnHit });
   },
   manaBonus() {
     let manaBonus = 0;
     manaBonus += (warlockMastery.curse.soulDrinker.currentRank * warlockMastery.curse.soulDrinker.multiplier);
-    return ({name: 'Mana Bonus', value: manaBonus});
+    return ({ name: 'Mana Bonus', value: manaBonus });
   },
   manaPercent() {
     let manaPercent = 0;
     manaPercent += (warlockMastery.shadow.soulDrain.currentRank * warlockMastery.shadow.soulDrain.multiplier);
-    return ({name: 'Mana Percent', value: manaPercent});
+    return ({ name: 'Mana Percent', value: manaPercent });
   },
   manaPerSecond() {
     const manaPerSecond = 0;
-    return ({name: 'Mana Per Second', value: manaPerSecond});
+    return ({ name: 'Mana Per Second', value: manaPerSecond });
   },
   manaOnHit() {
     const manaOnHit = 0;
-    return ({name: 'Mana On Hit', value: manaOnHit});
+    return ({ name: 'Mana On Hit', value: manaOnHit });
   },
   reach() {
     let reach = 0;
     reach += (warlockMastery.fire.destruction.currentRank * warlockMastery.fire.destruction.multiplier);
-    return ({name: 'Reach', value: reach});
+    return ({ name: 'Reach', value: reach });
   },
   effectDuration() {
     let effectDuration = 0;
     effectDuration += (warlockMastery.curse.jinxed.currentRank * warlockMastery.curse.jinxed.multiplier);
-    return ({name: 'Effect Duration', value: effectDuration});
+    return ({ name: 'Effect Duration', value: effectDuration });
   },
   damageBonus() {
     let damageBonus = 0;
     damageBonus += (warlockMastery.sorcery.spellpower.currentRank * warlockMastery.sorcery.spellpower.multiplier);
-    return ({name: 'Damage Bonus', value: damageBonus});
+    return ({ name: 'Damage Bonus', value: damageBonus });
   },
   attackSpeedBonus() {
     let attackSpeedBonus = 0;
     attackSpeedBonus += (warlockMastery.poison.rapidInfections.currentRank * warlockMastery.poison.rapidInfections.currentRank);
-    return ({name: 'Attack Speed Bonus', value: attackSpeedBonus});
+    return ({ name: 'Attack Speed Bonus', value: attackSpeedBonus });
   },
   critChance() {
     let critChance = 0;
     critChance += (warlockMastery.sorcery.elementalOverload.currentRank * warlockMastery.sorcery.elementalOverload.multiplier);
-    return ({name: 'Crit Chance', value: critChance});
+    return ({ name: 'Crit Chance', value: critChance });
   },
   critDamage() {
     let critDamage = 0;
     critDamage += (warlockMastery.frost.skullShatter.currentRank * warlockMastery.frost.skullShatter.multiplier);
-    return ({name: 'Crit Damage', value: critDamage});
+    return ({ name: 'Crit Damage', value: critDamage });
   },
   overpowerBonus() {
     let overpowerBonus = 0;
     overpowerBonus += (warlockMastery.bane.overpowerSkill.currentRank * warlockMastery.bane.overpowerSkill.multiplier)
     + (warlockMastery.curse.overpowerSkill.currentRank * warlockMastery.curse.overpowerSkill.multiplier)
     + (warlockMastery.sorcery.overpowerSkill.currentRank * warlockMastery.sorcery.overpowerSkill.multiplier);
-    return ({name: 'Overpower Bonus', value: overpowerBonus});
+    return ({ name: 'Overpower Bonus', value: overpowerBonus });
   },
   poisonDamage() {
     const poisonDamage = 0;
-    return ({name: 'Poison Damage', value: poisonDamage});
+    return ({ name: 'Poison Damage', value: poisonDamage });
   },
   frostDamage() {
     const frostDamage = 0;
-    return ({name: 'Frost Damage', value: frostDamage});
+    return ({ name: 'Frost Damage', value: frostDamage });
   },
   fireDamage() {
     const fireDamage = 0;
-    return ({name: 'Fire Damage', value: fireDamage});
+    return ({ name: 'Fire Damage', value: fireDamage });
   },
   shadowDamage() {
     const shadowDamage = 0;
-    return ({name: 'Shadow Damage', value: shadowDamage});
+    return ({ name: 'Shadow Damage', value: shadowDamage });
   },
   sorceryDamage() {
     const sorceryDamage = 0;
-    return ({name: 'Sorcery Damage', value: sorceryDamage});
+    return ({ name: 'Sorcery Damage', value: sorceryDamage });
   },
   curseDamage() {
     const curseDamage = 0;
-    return ({name: 'Curse Damage', value: curseDamage});
+    return ({ name: 'Curse Damage', value: curseDamage });
   },
   baneDamage() {
     const baneDamage = 0;
-    return ({name: 'Bane Damage', value: baneDamage});
+    return ({ name: 'Bane Damage', value: baneDamage });
   },
   physicalResist() {
     const physicalResist = 0;
-    return ({name: 'Physical Resist', value: physicalResist});
+    return ({ name: 'Physical Resist', value: physicalResist });
   },
   fireResist() {
     let fireResist = 0;
     fireResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
     + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
-    return ({name: 'Fire Resist', value: fireResist});
+    return ({ name: 'Fire Resist', value: fireResist });
   },
   frostResist() {
     let frostResist = 0;
     frostResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
     + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
-    return ({name: 'Frost Resist', value: frostResist});
+    return ({ name: 'Frost Resist', value: frostResist });
   },
   lightningResist() {
     let lightningResist = 0;
     lightningResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
     + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
-    return ({name: 'Lightning Resist', value: lightningResist});
+    return ({ name: 'Lightning Resist', value: lightningResist });
   },
   poisonResist() {
     let poisonResist = 0;
     poisonResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
     + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
-    return ({name: 'Poison Resist', value: poisonResist});
+    return ({ name: 'Poison Resist', value: poisonResist });
   },
   holyResist() {
     let holyResist = 0;
     holyResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
     + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
-    return ({name: 'Holy Resist', value: holyResist});
+    return ({ name: 'Holy Resist', value: holyResist });
   },
   ShadowResist() {
     let ShadowResist = 0;
     ShadowResist += (warlockMastery.bane.enhancedResistance.currentRank * warlockMastery.bane.enhancedResistance.multiplier)
     + (warlockMastery.curse.enhancedResistance.currentRank * warlockMastery.curse.enhancedResistance.multiplier)
     + (warlockMastery.sorcery.enhancedResistance.currentRank * warlockMastery.sorcery.enhancedResistance.multiplier);
-    return ({name: 'Shadow Resist', value: ShadowResist});
+    return ({ name: 'Shadow Resist', value: ShadowResist });
   },
   thorns() {
     const thorns = 0;
-    return ({name: 'Thorns', value: thorns});
+    return ({ name: 'Thorns', value: thorns });
   },
   potionEffectiveness() {
     let potionEffectiveness = 0;
     potionEffectiveness += (warlockMastery.curse.improvedPotions.currentRank * warlockMastery.curse.improvedPotions.multiplier)
    + (warlockMastery.sorcery.improvedPotions.currentRank * warlockMastery.sorcery.improvedPotions.multiplier)
    + (warlockMastery.bane.improvedPotions.currentRank * warlockMastery.bane.improvedPotions.multiplier);
-    return ({name: 'Potion Effectiveness', value: potionEffectiveness});
+    return ({ name: 'Potion Effectiveness', value: potionEffectiveness });
   },
   moveSpeed() {
     let moveSpeed = 0;
     moveSpeed += (warlockMastery.bane.deathsMarch.currentRank * warlockMastery.bane.deathsMarch.multiplier);
-    return ({name: 'Move Speed', value: moveSpeed});
+    return ({ name: 'Move Speed', value: moveSpeed });
   },
 
 };
@@ -275,7 +275,7 @@ var warlockMastery = {
   shadow: {
     shadowMastery: {
       name: 'Shadow Mastery',
-      image: './img/warlock/mastery/shadow/shadow_mastery.png'
+      image: './img/warlock/mastery/shadow/shadow_mastery.png',
     },
     soulDrain: {
       name: 'Soul Drain',
@@ -380,7 +380,7 @@ var warlockMastery = {
   frost: {
     frostMastery: {
       name: 'Frost Mastery',
-      image: './img/warlock/mastery/frost/frost_mastery.png'
+      image: './img/warlock/mastery/frost/frost_mastery.png',
     },
     skullShatter: {
       name: 'Skull Shatter',
@@ -485,7 +485,7 @@ var warlockMastery = {
   poison: {
     poisonMastery: {
       name: 'Poison Mastery',
-      image: './img/warlock/mastery/poison/poison_mastery.png'
+      image: './img/warlock/mastery/poison/poison_mastery.png',
     },
     rapidInfections: {
       name: 'Rapid Infections',
@@ -695,7 +695,7 @@ var warlockMastery = {
   bane: {
     baneMastery: {
       name: 'Bane Mastery',
-      image: './img/warlock/mastery/bane/bane_mastery.png'
+      image: './img/warlock/mastery/bane/bane_mastery.png',
     },
     darkBlood: {
       name: 'Dark Blood',
@@ -800,7 +800,7 @@ var warlockMastery = {
   sorcery: {
     sorceryMastery: {
       name: 'Sorcery Mastery',
-      image: './img/warlock/mastery/sorcery/sorcery_mastery.png'
+      image: './img/warlock/mastery/sorcery/sorcery_mastery.png',
     },
     spellpower: {
       name: 'Spellpower',
