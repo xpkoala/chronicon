@@ -16,8 +16,8 @@
             <select>
                 <option>Warlock</option>
             </select>
-            <div class="skill-tree">
-            </div>
+            <div class="skill-tree"></div>
+            <div class="character"></div>
         </div>
     </main>
     <footer>
@@ -64,7 +64,18 @@
       }
 
       function populateCharacter() {
-
+        const characterContainer = $('.character');
+        characterContainer.empty();
+        for(const attribute in characterWarlock) {
+          if(attribute === 'name') {
+            const label = new $('<p />', {text: characterWarlock[attribute]});
+            characterContainer.append(label)
+          } else {
+            const data = characterWarlock[attribute]();
+            const stat = new $('<p />', {text: `${data.name}: ${data.value}`});
+            characterContainer.append(stat);
+          }
+        }
       }
 
       $(document).on('click', '.skill-img', function(e) {
@@ -84,6 +95,7 @@
             window[character][skillMastery][skillName].currentRank += 1;
           }
         }
+        populateCharacter();
       });
       $(document).on('mousedown', '.skill-img', function(e){
         if(e.which === 3) {
@@ -100,9 +112,11 @@
             window[character][skillMastery][skillName].currentRank -= 1;
           }
         }
+        populateCharacter();
       });
 
       populateSkills();
+      populateCharacter();
     })
 </script>
 </html>

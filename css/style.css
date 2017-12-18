@@ -58,6 +58,17 @@ main {
     cursor: pointer;
 }
 
+.character {
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.character p {
+    min-width: 150px;
+}
+
 footer {
     height: 50px;
     width: 100%;
