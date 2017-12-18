@@ -166,7 +166,7 @@ const characterWarlock = {
 
 };
 
-let warlockMastery = {
+var warlockMastery = {
   fire: {
     fireMastery: {
       name: 'Fire Mastery',

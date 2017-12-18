@@ -33,6 +33,7 @@ main {
 
 .skill-tree {
     width: 100%;
+    min-width: 600px;
 }
 
 .mastery {

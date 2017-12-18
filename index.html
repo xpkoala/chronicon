@@ -34,7 +34,7 @@
     $(() => {
       const skillTree = $('.skill-tree');
 
-      function populate() {
+      function populateSkills() {
         let newMastery;
         for (const mastery in warlockMastery) {
           const currentMastery = warlockMastery[mastery];
@@ -47,7 +47,11 @@
             const imgSrc = currentMastery[skill].image;
             const skillImg = new $('<img />', {'src': imgSrc} );
             skillImg.addClass('skill-img');
+            skillImg.attr('alt', skill);
             skillImg.attr('max', currentMastery[skill].maxRank);
+            skillImg.attr('mastery', mastery);
+            skillImg.attr('skill', skill);
+            skillImg.attr('character', 'warlockMastery');
             divContainer.append(skillImg);
             const counter = new $('<p />');
             counter.html('0');
@@ -59,16 +63,26 @@
         }
       }
 
-      populate();
+      function populateCharacter() {
+
+      }
 
       $(document).on('click', '.skill-img', function(e) {
         let current = parseInt($(this).next().html());
         let rowCurrent = parseInt($(this).parent().parent().children(':first-child').children(':first-child').next().html());
         if(current < $(this).attr('max') && ($(this).attr('max')) !== undefined) {
-          current += 1;
-          rowCurrent += 1;
-          $(this).next().html(current);
-          $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent);
+          if($(this).parent().prev().children(':last-child').html() === '0' && ($(this).parent().prev().children(':first-child').attr('max')) !== undefined){
+            alert('Skill into previous skill')
+          } else {
+            current += 1;
+            rowCurrent += 1;
+            $(this).next().html(current);
+            $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent);
+            const skillMastery = $(this).attr('mastery');
+            const skillName = $(this).attr('skill');
+            const character = $(this).attr('character');
+            window[character][skillMastery][skillName].currentRank += 1;
+          }
         }
       });
       $(document).on('mousedown', '.skill-img', function(e){
@@ -79,10 +93,16 @@
             current -= 1;
             rowCurrent -= 1;
             $(this).next().html(current);
-            $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent)
+            $(this).parent().parent().children(':first-child').children(':first-child').next().html(rowCurrent);
+            const skillMastery = $(this).attr('mastery');
+            const skillName = $(this).attr('skill');
+            const character = $(this).attr('character');
+            window[character][skillMastery][skillName].currentRank -= 1;
           }
         }
-      })
+      });
+
+      populateSkills();
     })
 </script>
 </html>
