@@ -95,6 +95,7 @@
             const skillName = $(this).attr('skill');
             const character = $(this).attr('character');
             window[character][skillMastery][skillName].currentRank += 1;
+            window[character][skillMastery][Object.keys(window[character][skillMastery])[0]].currentRank += 1;
           }
         }
         populateCharacter();
@@ -116,6 +117,7 @@
               const skillName = $(this).attr('skill');
               const character = $(this).attr('character');
               window[character][skillMastery][skillName].currentRank -= 1;
+              window[character][skillMastery][Object.keys(window[character][skillMastery])[0]].currentRank -= 1;
             }
           }
         }
