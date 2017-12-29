@@ -170,7 +170,109 @@ const characterWarlock = {
     moveSpeed += (warlockMastery.bane.deathsMarch.currentRank * warlockMastery.bane.deathsMarch.multiplier);
     return ({ name: 'Move Speed', value: moveSpeed });
   },
+};
 
+var warlockSkills = {
+  branchOne: {
+    epidemic: {
+      name: 'Epidemic',
+      type: 'Poison',
+      tier: 1,
+      passive: true,
+      description: 'Increases Attack Speed by n%',
+      currentRank: 0,
+      maxRank: 5,
+      image: '',
+      multipliers: {
+        attackSpeedBase: 7,
+        attackSpeed: 2,
+      }
+    },
+    taintedBlood: {
+      name: 'Tainted Blood',
+      type: 'Poison',
+      tier: 3,
+      passive: true,
+      description: 'Increases Mana Regeneration by n Mana per second',
+      currentRank: 0,
+      maxRank: 3,
+      image: '',
+      multipliers: {
+        manaPerSecondBase: 19,
+        manaPerSecond: 11,
+      }
+    },
+    toxicVeil: {
+      name: 'Toxic Veil',
+      type: 'Poison',
+      tier: 5,
+      passive: true,
+      description: 'Adds n% chance to evade attacks, completely ignoring damage.',
+      currentRank: 0,
+      maxRank: 3,
+      image: '',
+      multipliers: {
+        evadeBase: 4,
+        evade: 3,
+      }
+    }
+  },
+  branchTwo: {
+    active: {
+      soulBane: {
+        name: 'Soul Bane',
+        type: 'Poison Utility',
+        tier: 1,
+        passive: false,
+        description: 'The Warlock sacrifices all Souls to increase the damage of all Bane spells by n% for each Soul sacrificed. Effect lasts n seconds.',
+        currentRank: 0,
+        maxRank: 1,
+        image: '',
+        multipliers: {
+          baneDamageBase: 3,
+        }
+      },
+      soulCurse: {
+        name: 'Soul Curse',
+        type: 'Poison Utility',
+        tier: 1,
+        passive: false,
+        description: 'The Warlock sacrifices all Souls to increase the damage of all Curse spells by n% for each Soul sacrificed. Effect lasts n seconds.',
+        currentRank: 0,
+        maxRank: 1,
+        image: '',
+        multipliers: {
+          curseDamageBase: 3,
+        }
+      },
+      soulSorcery: {
+        name: 'Soul Sorcery',
+        type: 'Poison Utility',
+        tier: 1,
+        passive: false,
+        description: 'The Warlock sacrifices all Souls to increase the damage of all Sorcery spells by n% for each Soul Sacrifices. Effect lasts n seconds.',
+        currentRank: 0,
+        maxRank: 1,
+        image: '',
+        multipliers: {
+          soulDamageBase: 3,
+        }
+      }
+    },
+    masterOfTheArts: {
+      name: 'Master of the Arts',
+      type: 'Poison',
+      tier: 2,
+      passive: true,
+      description: 'The previously selected skill also increases the damage of the other two skill types by n% of the effect',
+      currentRank: 0,
+      maxRank: 3,
+      image: '',
+      multipliers: {
+        //Dunno what to put here
+      }
+    }
+  }
 };
 
 var warlockMastery = {
